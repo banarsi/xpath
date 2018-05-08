@@ -11,7 +11,7 @@ public class Logintest extends Basetest
 
 {
 @Test()
-public void login_test()
+public void login_test() throws InterruptedException
 {
 	Login login=new Login(driver);
 	System.out.print(driver.getTitle());
@@ -19,6 +19,7 @@ public void login_test()
 	
 	login.verify(prop.getProperty("title"));
 	login.ring();
+	Thread.sleep(2000);
 	login.gold_options();
 }
 }
